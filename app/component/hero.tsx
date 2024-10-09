@@ -43,7 +43,7 @@ const Hero = () => {
                     </p>
 
                     <div className="button-container">
-                        <Link href={"#Contact"}>
+                        <Link href={"/contact"}>
                             <button className="contact-button">
                                 Contact
                             </button>
