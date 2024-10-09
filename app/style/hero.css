@@ -14,7 +14,7 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    animation: fadeIn 1.5s ease-out; /* Added animation */
+    animation: fadeIn 1.5s ease-out;
 }
 
 /* Container */
@@ -26,7 +26,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    animation: slideUp 1s ease-out; /* Added animation */
+    animation: slideUp 1s ease-out;
 }
 
 @media (min-width: 768px) {
@@ -40,7 +40,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
-    animation: bounceIn 2s ease; /* Added bounce-in animation */
+    animation: bounceIn 2s ease;
 }
 
 .image-wrapper {
@@ -51,7 +51,7 @@
     overflow: hidden;
     border: 8px solid #0d5c36;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: scaleUp 1.5s ease-out; /* Added scale-up animation */
+    animation: scaleUp 1.5s ease-out;
 }
 
 @media (min-width: 768px) {
@@ -72,14 +72,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: zoomIn 2s ease-out; /* Image zoom-in animation */
+    animation: zoomIn 2s ease-out;
 }
 
 /* Text Section */
 .text-container {
     text-align: center;
     max-width: 600px;
-    animation: fadeInUp 1s ease-out; /* Fade-in-up animation */
+    animation: fadeInUp 1s ease-out;
 }
 
 @media (min-width: 768px) {
@@ -94,7 +94,7 @@
     margin-bottom: 20px;
     color: #333;
     font-weight: bold;
-    animation: fadeIn 1s ease-out; /* Title fade-in */
+    animation: fadeIn 1s ease-out;
 }
 
 @media (min-width: 768px) {
@@ -108,7 +108,7 @@
     height: 2px;
     background-color: #228B22;
     margin: 10px auto;
-    animation: expandDivider 1.5s ease-out; /* Divider expand animation */
+    animation: expandDivider 1.5s ease-out;
 }
 
 @media (min-width: 768px) {
@@ -125,7 +125,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 1.25rem;
-    animation: fadeInUp 1.5s ease-out; /* Description fade-in */
+    animation: fadeInUp 1.5s ease-out;
 }
 
 @media (min-width: 768px) {
@@ -138,7 +138,7 @@
 .button-container {
     display: flex;
     justify-content: center;
-    animation: bounceIn 2s ease; /* Button bounce animation */
+    animation: bounceIn 2s ease;
 }
 
 .contact-button {
@@ -149,7 +149,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    animation: fadeInUp 1.5s ease-out; /* Button fade-in */
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .contact-button:hover {
@@ -239,11 +239,52 @@
         width: 400px;
         height: 400px;
     }
+
+    /* Ensuring Hero Section stays full-screen on small devices */
+    .hero-section {
+        height: auto;
+        min-height: 100vh; /* Make sure the section fills the entire viewport */
+    }
 }
 
 @media (min-width: 1024px) {
     .image-wrapper {
         width: 500px;
         height: 500px;
+    }
+}
+
+/* Navbar adjustments */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensures navbar stays on top */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+}
+
+/* Footer adjustments */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Full Screen on small devices */
+@media (max-width: 480px) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        padding: 10px;
     }
 }
