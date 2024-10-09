@@ -1,0 +1,166 @@
+/* About Container */
+.about-container {
+    background-image: url('/assets/Picture/bg.png'); /* Background image */
+    background-size: cover; /* Ensure background covers full area */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    width: 100vw; /* Full viewport width */
+    min-height: 100vh; /* Full viewport height */
+    display: flex; /* Flex layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    animation: fadeIn 2s ease-in; /* Animation on page load */
+}
+
+/* Section Styles */
+.about-section {
+    display: flex; /* Flex layout */
+    align-items: center; /* Center vertically */
+    padding: 3rem 2rem; /* Increased padding for more spacing */
+    width: 100%;
+    height: 100%; /* Make the section take the full height */
+}
+
+/* About Content Styles */
+.about-content {
+    display: flex; /* Flex layout for content */
+    justify-content: space-between; /* Space between image and text */
+    max-width: 1200px; /* Max width */
+    margin: auto; /* Center content */
+    width: 100%; /* Full width */
+    padding: 1.5rem; /* Inner padding */
+    border-radius: 10px; /* Rounded corners for a clean look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the content */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.about-content:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+/* Profile Image Container */
+.profile-image-container {
+    flex: 1; /* Grow to fill space */
+    display: flex; /* Center image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 1.5rem; /* Increased margin around the image */
+    animation: imageFloat 2s ease-in-out infinite; /* Animation to create floating effect */
+}
+
+/* Profile Image */
+.profile-image {
+    border-radius: 50%; /* Circular image */
+    width: 100%; /* Full width */
+    height: auto; /* Auto height */
+    max-width: 400px; /* Slightly smaller max width for better responsiveness */
+    border: 6px solid #0d5c36; /* Green border around the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow to make the image stand out */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.profile-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* About Text Styles */
+.about-text {
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    flex: 1; /* Grow to fill space */
+    padding: 0 2rem; /* Padding */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Stack elements */
+    align-items: center; /* Center elements */
+    text-align: left; /* Align text to the left */
+    animation: slideInLeft 1s ease-in-out; /* Text slide-in animation */
+}
+
+/* Title Styles */
+.about-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem; /* Title size */
+    font-weight: bold; /* Bold font */
+    margin-bottom: 1.5rem; /* Margin below */
+    color: #0d5c36; /* Green title color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft text shadow */
+}
+
+/* Description Styles */
+.about-description {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1rem 0; /* Margin above and below */
+    line-height: 1.6; /* Line height for readability */
+    text-align: justify; /* Justify text for clean paragraphs */
+    color: rgb(31, 25, 25); /* Dark text for better readability */
+}
+
+/* CV Button Container */
+.cv-button-container {
+    display: flex; /* Flex layout for button */
+    justify-content: center; /* Center button */
+    margin-top: 2rem;
+}
+
+/* CV Button Styles */
+.cv-button {
+    background-color: #2F855A; /* Button background */
+    color: white; /* Button text color */
+    padding: 0.7rem 2rem; /* Padding */
+    border: none; /* No border */
+    border-radius: 0.25rem; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.cv-button:hover {
+    background-color: #48BB78; /* Change color on hover */
+    transform: translateY(-5px); /* Lift button on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column; /* Stack image and text on medium screens */
+    }
+
+    .profile-image {
+        max-width: 350px; /* Adjust image size on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack image and text on small screens */
+    }
+
+    .profile-image {
+        max-width: 250px; /* Adjust image size on small screens */
+    }
+
+    .about-title {
+        font-size: 2rem; /* Adjust title size on small screens */
+    }
+
+    .cv-button {
+        padding: 0.5rem 1.5rem; /* Adjust button padding on small screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes imageFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}

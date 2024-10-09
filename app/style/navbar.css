@@ -1,0 +1,93 @@
+/* Container for the Navbar */
+.navbar {
+    background-color: #8FBC8F; /* Background color */
+    z-index: 50; /* Ensure it stays above other elements */
+    position: sticky; /* Stick to the top */
+    top: 0; /* Align to the top */
+}
+
+/* Header Styles */
+.navbar-header {
+    color: rgb(34, 27, 27); /* Text color */
+    font-family:'Times New Roman', Times, serif; /* Font family */
+}
+
+/* Logo Section */
+.navbar-logo {
+    display: flex; /* Flex layout for logo */
+    align-items: center; /* Center logo vertically */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Logo Image */
+.logo-img {
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+}
+
+/* Logo Text */
+.logo-text {
+    font-weight: bold; /* Bold font */
+    margin-left: 10px; /* Space between logo image and text */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none; /* Hide on larger screens */
+    font-size: 2rem; /* Font size for icons */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Navigation Links */
+.navbar-links {
+    display: flex; /* Flex layout for links */
+    justify-content: center; /* Center links */
+    gap: 20px; /* Space between links */
+}
+
+/* Navbar Link Styles */
+.navbar-link {
+    color: #1F2937; /* Link color */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder; /* Bold font */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+/* Hover Effect for Links */
+.navbar-link:hover {
+    color: #38A169; /* Change color on hover */
+}
+
+/* Download Button Styles */
+.download-button {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #2F855A; /* Button background */
+    color: white; /* Button text color */
+    padding: 0.5rem 1rem; /* Padding */
+    border: none; /* No border */
+    border-radius: 0.25rem; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover Effect for Button */
+.download-button:hover {
+    background-color: #48BB78; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links on smaller screens */
+        flex-direction: column; /* Stack links vertically */
+        margin-top: 1rem; /* Space above links */
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show links when menu is open */
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button on small screens */
+    }
+}

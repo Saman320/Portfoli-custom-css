@@ -1,0 +1,216 @@
+/* Contact Section Container */
+.contact-container {
+    background: url("/assets/Picture/bg.png") center/cover fixed no-repeat;
+    padding: 80px 20px;
+    position: relative;
+    animation: fadeIn 1s ease-out; /* Animation added */
+}
+
+/* Header Section */
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out; /* Animation added */
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    font-family: 'Times New Roman', Times, serif;
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-subtitle {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(39, 37, 37);
+    margin-top: 10px;
+    font-size: 1.50rem;
+    font-weight: bold;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Contact Info Cards */
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.contact-card {
+    background-color: rgb(235, 227, 227);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards; /* Animation on card load */
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.icon {
+    font-size: 3rem;
+    color: #38a169;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.card-text {
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.contact-card:hover .icon {
+    transform: rotate(360deg); /* Animation on hover */
+}
+
+/* Contact Form */
+.contact-form-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgb(235, 227, 227);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards; /* Form load animation */
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #2d3748;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #4a5568;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #38a169;
+}
+
+.textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #38a169;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards; /* Button animation */
+}
+
+.submit-btn:hover {
+    background-color: #2f855a;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        max-width: 90%;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .form-input {
+        padding: 10px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

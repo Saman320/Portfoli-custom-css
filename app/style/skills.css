@@ -1,0 +1,159 @@
+/* Skills Section */
+#Skills {
+    background: url('/assets/Picture/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    width: 100vw; /* Full screen width */
+    min-height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.skills-container {
+    padding: 3rem;
+    max-width: 100%;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out; /* Container fade-in animation */
+}
+
+.skills-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeInUp 1s forwards ease-in-out 0.5s; /* Fade in title */
+}
+
+.skills-title h2 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #0a5f00;
+}
+
+.skills-title h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 1s forwards ease-in-out 0.7s; /* Fade in grid */
+}
+
+/* Individual Skill Item */
+.skill-item {
+    flex: 1 1 calc(33.333% - 2rem);
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards ease-in-out;
+}
+
+.skill-item:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+}
+
+.skill-item h2 {
+    font-size: 1.25rem;
+    color: #0a5f00;
+    display: flex;
+    align-items: center;
+}
+
+.skill-item .icon {
+    background-color: #0a5f00;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+/* Skill Bar Animation */
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 1rem;
+    height: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-bar-inner {
+    height: 100%;
+    background-color: #0a5f00;
+    border-radius: 10px;
+    width: 0; /* Start at 0% */
+    animation: growBar 2s forwards; /* Animate bar growth */
+}
+
+.skill-percentage {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Animations */
+
+/* Fade in from bottom */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in smoothly */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Skill bar growth animation */
+@keyframes growBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%; /* Adjust this width dynamically for different skill levels */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .skill-item {
+        flex: 1 1 calc(50% - 2rem); /* 2 items per row for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    .skill-item {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
