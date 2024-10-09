@@ -59,12 +59,13 @@
 .card-content {
     padding: 20px;
 }
-
 .icon {
     font-size: 3rem;
     color: #38a169;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto; /* Center horizontally with auto margins */
+    display: block; /* Ensure it behaves as a block-level element */
     transition: transform 0.3s ease;
+    text-align: center;
 }
 
 .card-title {
